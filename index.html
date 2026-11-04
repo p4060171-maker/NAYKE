@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOVE IN COLOR — Nike Silhouette Study</title>
+<meta name="description" content="An immersive motion-design showcase of two Nike silhouettes — the SB Court Low and the Air Force 1 High — with eight interactive colorways. Portfolio concept only; no cart, no checkout.">
+<meta name="theme-color" content="#05050a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader__inner">
+    <div class="loader__word" data-loader-word>MOVE IN COLOR</div>
+    <div class="loader__bar"><i></i></div>
+    <div class="loader__count" data-loader-count>00</div>
+  </div>
+</div>
+
+<canvas class="bg-canvas" id="bgCanvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><i class="cursor__dot"></i><span class="cursor__ring"></span></div>
+<div class="scroll-progress" aria-hidden="true"><i id="scrollProgressBar"></i></div>
+
+<header class="nav" id="nav">
+  <a href="#hero" class="nav__brand" data-cursor="link">
+    <svg viewBox="0 0 100 40" class="nav__mark" aria-hidden="true"><path d="M2 26C20 34 44 26 68 10 80 3 90 0 98 0 92 10 78 22 60 30 40 39 16 36 2 26Z"/></svg>
+    <span>Silhouette<em>Study</em></span>
+  </a>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#model-low" data-index="01" data-cursor="link"><i>01</i>Court Low</a>
+    <a href="#model-high" data-index="02" data-cursor="link"><i>02</i>Force High</a>
+    <a href="#spectrum" data-index="03" data-cursor="link"><i>03</i>Spectrum</a>
+    <a href="#craft" data-index="04" data-cursor="link"><i>04</i>Craft</a>
+  </nav>
+  <div class="nav__side">
+    <span class="nav__pill" id="navAccent">Electric Red</span>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <a href="#model-low" data-menu-link>01 <span>Court Low</span></a>
+  <a href="#model-high" data-menu-link>02 <span>Force High</span></a>
+  <a href="#spectrum" data-menu-link>03 <span>Spectrum</span></a>
+  <a href="#craft" data-menu-link>04 <span>Craft</span></a>
+  <a href="#compare" data-menu-link>05 <span>Compare</span></a>
+</div>
+
+<main id="content">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__type" aria-hidden="true">
+      <h1 class="display" data-split="lines">
+        <span class="line"><i>MOVE</i></span>
+        <span class="line line--mid"><i>IN</i></span>
+        <span class="line"><i>COLOR</i></span>
+      </h1>
+    </div>
+
+    <div class="hero__stage" data-hero-stage>
+      <div class="hero__halo" aria-hidden="true"></div>
+      <img class="hero__shoe" src="assets/img/low-red.jpg" alt="Nike SB Court Low in Electric Red, floating studio shot" data-hero-shoe fetchpriority="high">
+      <div class="hero__shadow" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__copy">
+      <p class="eyebrow" data-reveal>Concept showcase — SS/26 pigment study</p>
+      <p class="hero__lead" data-reveal>Two silhouettes. Eight colorways. A gallery of light, motion and pigment — built to be looked at, not bought.</p>
+      <div class="hero__actions" data-reveal>
+        <a href="#model-low" class="btn btn--primary" data-cursor="button"><span>Enter the study</span></a>
+        <a href="#spectrum" class="btn btn--ghost" data-cursor="button"><span>See all colorways</span></a>
+      </div>
+    </div>
+
+    <div class="hero__meta" aria-hidden="true">
+      <span data-parallax="0.06">SCROLL TO EXPLORE</span>
+      <span class="hero__scrollline"></span>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>SB Court Low</span><b>◆</b><span>Air Force 1 High</span><b>◆</b><span>8 Colorways</span><b>◆</b><span>Motion Study</span><b>◆</b><span>Showcase Only</span><b>◆</b><span>No Cart</span><b>◆</b><span>No Checkout</span><b>◆</b>
+        <span>SB Court Low</span><b>◆</b><span>Air Force 1 High</span><b>◆</b><span>8 Colorways</span><b>◆</b><span>Motion Study</span><b>◆</b><span>Showcase Only</span><b>◆</b><span>No Cart</span><b>◆</b><span>No Checkout</span><b>◆</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto">
+    <div class="wrap">
+      <p class="statement" data-split="words">A product page is usually a shop window. This one is a <em>studio</em> — every surface reacts to scroll, cursor and the pigment you choose.</p>
+      <div class="stats">
+        <div class="stat" data-reveal><b data-count="2">0</b><span>Silhouettes</span></div>
+        <div class="stat" data-reveal><b data-count="8">0</b><span>Colorways</span></div>
+        <div class="stat" data-reveal><b data-count="0">0</b><span>Carts, ever</span></div>
+        <div class="stat" data-reveal><b data-count="60">0</b><span>Frames / second</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODEL 01 ============ -->
+  <section class="model" id="model-low" data-model="low" style="--accent:#FF2A1F;--accent-soft:#FF7A45">
+    <div class="model__grid wrap">
+
+      <div class="model__stage">
+        <div class="stage__index" aria-hidden="true">01</div>
+        <div class="stage__glow" aria-hidden="true"></div>
+        <div class="stage__orbit" aria-hidden="true"><i></i><i></i></div>
+        <div class="stage__word" aria-hidden="true">COURT</div>
+        <div class="shoe" data-shoe="low" data-tilt>
+          <img class="shoe__img is-on" src="assets/img/low-red.jpg"    alt="SB Court Low in Electric Red"    data-key="red">
+          <img class="shoe__img" loading="lazy" src="assets/img/low-blue.jpg"   alt="SB Court Low in Neon Blue"     data-key="blue">
+          <img class="shoe__img" loading="lazy" src="assets/img/low-yellow.jpg" alt="SB Court Low in Vivid Yellow"  data-key="yellow">
+          <img class="shoe__img" loading="lazy" src="assets/img/low-green.jpg"  alt="SB Court Low in Emerald Green" data-key="green">
+        </div>
+        <div class="stage__caption"><span data-stage-name>Electric Red</span><em data-stage-hex>#FF2A1F</em></div>
+      </div>
+
+      <div class="model__panel">
+        <p class="eyebrow" data-reveal>Model 01 — Skate / Casual</p>
+        <h2 class="model__title" data-reveal>SB Court <span>Low</span></h2>
+        <p class="model__lede" data-reveal>A flat, low slung cupsole built for grip and board feel — rendered here as a light source. The suede takes pigment harder than anything else in the lineup, which is why every colorway below reads like a different shoe.</p>
+
+        <div class="picker" role="group" aria-label="Choose a colorway for the SB Court Low" data-picker="low" data-reveal>
+          <span class="picker__label">Colorway</span>
+          <div class="picker__row">
+            <button class="swatch is-on" data-key="red"    data-name="Electric Red" data-hex="#FF2A1F" data-soft="#FF7A45" style="--s:#FF2A1F" aria-pressed="true"><i></i><span>Electric Red</span></button>
+            <button class="swatch" data-key="blue" data-name="Neon Blue" data-hex="#1E6BFF" data-soft="#4FD0FF" style="--s:#1E6BFF" aria-pressed="false"><i></i><span>Neon Blue</span></button>
+            <button class="swatch" data-key="yellow" data-name="Vivid Yellow" data-hex="#FFD400" data-soft="#FFE86B" style="--s:#FFD400" aria-pressed="false"><i></i><span>Vivid Yellow</span></button>
+            <button class="swatch" data-key="green"  data-name="Emerald"      data-hex="#00D97A" data-soft="#4DFFB8" style="--s:#00D97A" aria-pressed="false"><i></i><span>Emerald</span></button>
+          </div>
+        </div>
+
+        <dl class="specs" data-reveal>
+          <div><dt>Profile</dt><dd>Low-top, 6-eyelet</dd></div>
+          <div><dt>Upper</dt><dd>Suede + canvas</dd></div>
+          <div><dt>Sole</dt><dd>12mm rubber cupsole</dd></div>
+          <div><dt>Closure</dt><dd>Flat waxed lace</dd></div>
+          <div><dt>Weight</dt><dd>412 g / EU 42</dd></div>
+          <div><dt>Role</dt><dd>Skate &amp; street</dd></div>
+        </dl>
+
+        <div class="cards">
+          <article class="card" data-reveal data-parallax="0.03"><b>01</b><h3>Ollie panel</h3><p>Double-layer suede across the toe — the abrasion zone that usually dies first.</p></article>
+          <article class="card" data-reveal data-parallax="0.05"><b>02</b><h3>Collar lock</h3><p>Low foam cuff holds the heel without lifting the profile off the board.</p></article>
+          <article class="card" data-reveal data-parallax="0.07"><b>03</b><h3>Foxing tape</h3><p>Textured sidewall that catches rim light and keeps the sole from looking flat.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODEL 02 ============ -->
+  <section class="model model--alt" id="model-high" data-model="high" style="--accent:#7C3AED;--accent-soft:#B18CFF">
+    <div class="model__grid wrap">
+
+      <div class="model__stage">
+        <div class="stage__index" aria-hidden="true">02</div>
+        <div class="stage__glow" aria-hidden="true"></div>
+        <div class="stage__orbit stage__orbit--rev" aria-hidden="true"><i></i><i></i></div>
+        <div class="stage__word" aria-hidden="true">FORCE</div>
+        <div class="shoe" data-shoe="high" data-tilt>
+          <img class="shoe__img is-on" src="assets/img/high-violet.jpg" alt="Air Force 1 High in Ultra Violet" data-key="violet">
+          <img class="shoe__img" loading="lazy" src="assets/img/high-pink.jpg"  alt="Air Force 1 High in Hyper Pink" data-key="pink">
+          <img class="shoe__img" loading="lazy" src="assets/img/high-volt.jpg"  alt="Air Force 1 High in Volt"       data-key="volt">
+          <img class="shoe__img" loading="lazy" src="assets/img/high-cyan.jpg"  alt="Air Force 1 High in Ice Cyan"   data-key="cyan">
+        </div>
+        <div class="stage__caption"><span data-stage-name>Ultra Violet</span><em data-stage-hex>#7C3AED</em></div>
+      </div>
+
+      <div class="model__panel">
+        <p class="eyebrow" data-reveal>Model 02 — High-top / Strap</p>
+        <h2 class="model__title" data-reveal>Air Force 1 <span>High</span></h2>
+        <p class="model__lede" data-reveal>The strap changes everything. It adds a horizontal line at the ankle, splits the light across the collar and turns a smooth leather upper into a mirror for whatever pigment you put on it.</p>
+
+        <div class="picker" role="group" aria-label="Choose a colorway for the Air Force 1 High" data-picker="high" data-reveal>
+          <span class="picker__label">Colorway</span>
+          <div class="picker__row">
+            <button class="swatch is-on" data-key="violet" data-name="Ultra Violet" data-hex="#7C3AED" data-soft="#B18CFF" style="--s:#7C3AED" aria-pressed="true"><i></i><span>Ultra Violet</span></button>
+            <button class="swatch" data-key="pink"   data-name="Hyper Pink" data-hex="#FF2E93" data-soft="#FF8AC4" style="--s:#FF2E93" aria-pressed="false"><i></i><span>Hyper Pink</span></button>
+            <button class="swatch" data-key="volt"   data-name="Volt"       data-hex="#C6FF00" data-soft="#E8FF7A" style="--s:#C6FF00" aria-pressed="false"><i></i><span>Volt</span></button>
+            <button class="swatch" data-key="cyan"   data-name="Ice Cyan"   data-hex="#00E5FF" data-soft="#7DF9FF" style="--s:#00E5FF" aria-pressed="false"><i></i><span>Ice Cyan</span></button>
+          </div>
+        </div>
+
+        <dl class="specs" data-reveal>
+          <div><dt>Profile</dt><dd>High-top, 8-eyelet</dd></div>
+          <div><dt>Upper</dt><dd>Smooth full-grain leather</dd></div>
+          <div><dt>Sole</dt><dd>Stitched cupsole, encapsulated heel unit</dd></div>
+          <div><dt>Closure</dt><dd>Lace + hook-and-loop strap</dd></div>
+          <div><dt>Weight</dt><dd>528 g / EU 42</dd></div>
+          <div><dt>Role</dt><dd>Court heritage</dd></div>
+        </dl>
+
+        <div class="cards">
+          <article class="card" data-reveal data-parallax="0.03"><b>01</b><h3>Ankle strap</h3><p>Velcro across the collar — the single line that reads as the whole silhouette from across a room.</p></article>
+          <article class="card" data-reveal data-parallax="0.05"><b>02</b><h3>Perforated toe</h3><p>Seven rows of punch holes that break the highlight into a soft gradient.</p></article>
+          <article class="card" data-reveal data-parallax="0.07"><b>03</b><h3>Foxing stitch</h3><p>A single row of stitching where upper meets midsole, and the reason the profile stays crisp.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECTRUM ============ -->
+  <section class="spectrum" id="spectrum">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>03 — The full range</p>
+        <h2 class="sec-title" data-split="lines"><span class="line"><i>SPECTRUM</i></span></h2>
+        <p class="sec-sub" data-reveal>Eight pigment studies across two silhouettes. Hover to bring one forward, click to set the light for the whole room.</p>
+      </header>
+    </div>
+    <div class="spectrum__rail" id="spectrumRail">
+      <div class="spectrum__track">
+        <button class="chip" data-model="low" data-key="red"    data-name="Electric Red" data-hex="#FF2A1F" data-soft="#FF7A45"><i style="--c:#FF2A1F"></i><span>Electric Red</span><em>Court Low</em></button>
+        <button class="chip" data-model="low" data-key="blue"   data-name="Neon Blue"    data-hex="#1E6BFF" data-soft="#4FD0FF"><i style="--c:#1E6BFF"></i><span>Neon Blue</span><em>Court Low</em></button>
+        <button class="chip" data-model="low" data-key="yellow" data-name="Vivid Yellow" data-hex="#FFD400" data-soft="#FFE86B"><i style="--c:#FFD400"></i><span>Vivid Yellow</span><em>Court Low</em></button>
+        <button class="chip" data-model="low" data-key="green"  data-name="Emerald"      data-hex="#00D97A" data-soft="#4DFFB8"><i style="--c:#00D97A"></i><span>Emerald</span><em>Court Low</em></button>
+        <button class="chip" data-model="high" data-key="violet" data-name="Ultra Violet" data-hex="#7C3AED" data-soft="#B18CFF"><i style="--c:#7C3AED"></i><span>Ultra Violet</span><em>Force High</em></button>
+        <button class="chip" data-model="high" data-key="pink"   data-name="Hyper Pink"   data-hex="#FF2E93" data-soft="#FF8AC4"><i style="--c:#FF2E93"></i><span>Hyper Pink</span><em>Force High</em></button>
+        <button class="chip" data-model="high" data-key="volt"   data-name="Volt"         data-hex="#C6FF00" data-soft="#E8FF7A"><i style="--c:#C6FF00"></i><span>Volt</span><em>Force High</em></button>
+        <button class="chip" data-model="high" data-key="cyan"   data-name="Ice Cyan"     data-hex="#00E5FF" data-soft="#7DF9FF"><i style="--c:#00E5FF"></i><span>Ice Cyan</span><em>Force High</em></button>
+      </div>
+    </div>
+    <div class="wrap spectrum__preview">
+      <div class="preview__frame" data-reveal>
+        <img src="assets/img/low-red.jpg" alt="Selected colorway preview" data-preview-img>
+        <div class="preview__label"><span data-preview-name>Electric Red</span><em data-preview-model>SB Court Low</em></div>
+      </div>
+      <p class="preview__note" data-reveal>Pigment values are studio approximations. Nothing on this page is for sale — it is a rendering exercise in how a single shape behaves under eight different lights.</p>
+    </div>
+  </section>
+
+  <!-- ============ CRAFT ============ -->
+  <section class="craft" id="craft">
+    <div class="wrap craft__grid">
+      <div class="craft__copy">
+        <p class="eyebrow" data-reveal>04 — Craft &amp; detail</p>
+        <h2 class="sec-title" data-split="lines">
+          <span class="line"><i>READ THE</i></span>
+          <span class="line"><i>SEAMS</i></span>
+        </h2>
+        <p class="sec-sub" data-reveal>Two reference plates anchor the study: the black-and-white low-top that set the flat, low slung proportion, and the all-white high-top that set the strap and the stitched midsole.</p>
+        <div class="craft__list">
+          <div data-reveal><b>Panels</b><p>Six cut pieces on the low-top, nine on the high. More panels means more shadow lines under a hard key light.</p></div>
+          <div data-reveal><b>Stitch</b><p>Single-needle foxing at 3.2 SPI. The stitch is what stops a white midsole from reading as a single flat shape.</p></div>
+          <div data-reveal><b>Pigment</b><p>Suede absorbs, leather reflects. The same hex behaves like two different materials across the two silhouettes.</p></div>
+        </div>
+      </div>
+      <div class="craft__plates">
+        <figure class="plate" data-reveal data-parallax="0.08">
+          <img loading="lazy" src="assets/img/ref-lowtop.jpg" alt="Reference plate: black and white low-top skate silhouette on a dark studio floor">
+          <figcaption><b>Plate A</b> Low profile · dark studio</figcaption>
+        </figure>
+        <figure class="plate plate--b" data-reveal data-parallax="0.14">
+          <img loading="lazy" src="assets/img/ref-hightop.jpg" alt="Reference plate: all white high-top with ankle strap suspended on cords">
+          <figcaption><b>Plate B</b> Suspended · strap detail</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARE ============ -->
+  <section class="compare" id="compare">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow" data-reveal>05 — Two silhouettes</p>
+        <h2 class="sec-title" data-split="lines"><span class="line"><i>SIDE BY SIDE</i></span></h2>
+      </header>
+      <div class="compare__grid">
+        <div class="compare__col" data-reveal>
+          <div class="compare__img"><img loading="lazy" src="assets/img/low-red.jpg" alt="SB Court Low silhouette"><span>SB Court Low</span></div>
+          <ul class="bars">
+            <li><b>Board feel</b><i style="--v:94%"></i></li>
+            <li><b>Height</b><i style="--v:32%"></i></li>
+            <li><b>Light pickup</b><i style="--v:68%"></i></li>
+            <li><b>Layering</b><i style="--v:40%"></i></li>
+          </ul>
+        </div>
+        <div class="compare__col" data-reveal>
+          <div class="compare__img"><img loading="lazy" src="assets/img/high-violet.jpg" alt="Air Force 1 High silhouette"><span>Air Force 1 High</span></div>
+          <ul class="bars">
+            <li><b>Board feel</b><i style="--v:52%"></i></li>
+            <li><b>Height</b><i style="--v:88%"></i></li>
+            <li><b>Light pickup</b><i style="--v:92%"></i></li>
+            <li><b>Layering</b><i style="--v:86%"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING ============ -->
+  <section class="closing">
+    <div class="wrap">
+      <h2 class="closing__type" data-split="lines">
+        <span class="line"><i>NOT A STORE.</i></span>
+        <span class="line"><i>A STUDIO.</i></span>
+      </h2>
+      <p class="closing__note" data-reveal>No cart. No checkout. No payment. Just two shapes and the eight lights they can wear.</p>
+      <a href="#hero" class="btn btn--primary btn--top" data-cursor="button"><span>Back to the top</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <svg viewBox="0 0 100 40" class="footer__mark" aria-hidden="true"><path d="M2 26C20 34 44 26 68 10 80 3 90 0 98 0 92 10 78 22 60 30 40 39 16 36 2 26Z"/></svg>
+      <p>Silhouette Study — an independent motion &amp; UI concept portfolio.</p>
+    </div>
+    <div class="footer__cols">
+      <div><h4>Sections</h4><a href="#model-low">Court Low</a><a href="#model-high">Force High</a><a href="#spectrum">Spectrum</a><a href="#craft">Craft</a></div>
+      <div><h4>Notice</h4><p>An unofficial design study. Not affiliated with, endorsed by, or sponsored by Nike, Inc. Product imagery is AI-rendered for demonstration.</p></div>
+    </div>
+  </div>
+  <div class="wrap footer__base"><span>© 2026 Silhouette Study</span><span>Showcase only — zero transactions</span></div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
